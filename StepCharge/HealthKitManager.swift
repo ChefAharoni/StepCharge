@@ -8,11 +8,11 @@
 import HealthKit
 import Combine
 
-class HealthKitManager: ObservableObject {
-    let healthStore = HKHealthStore()
-    @Published var steps = 0 // Published property to notify SwiftUI of changes
+class HealthKitManager: ObservableObject { // Class Declaration: Defines HealthKitManager as a class. The ObservableObject protocol allows instances of this class to be used within SwiftUI, enabling SwiftUI views to update when properties marked with @Published change.
+    let healthStore = HKHealthStore() // Health Store Property: Instantiates HKHealthStore, which is a HealthKit object that provides an interface for accessing and storing health data.
+    @Published var steps = 0 // Published property to notify SwiftUI of changes. | Published Property: Declares steps as an @Published property. This means that any changes to steps will notify SwiftUI views to update. steps is initialized to 0 and will store the step count.
 
-    init() {
+    init() { // Initializer: The init method checks if HealthKit data is available (HKHealthStore.isHealthDataAvailable()) and calls requestAuthorization() if it is. If HealthKit is not available, this is where you could handle that case (currently empty).
         if HKHealthStore.isHealthDataAvailable() {
             requestAuthorization()
         } else {

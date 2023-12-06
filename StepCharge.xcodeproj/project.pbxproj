@@ -7,23 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2171D1C52B20CB52007D3E6E /* StepChargeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1C42B20CB52007D3E6E /* StepChargeApp.swift */; };
-		2171D1C72B20CB52007D3E6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1C62B20CB52007D3E6E /* ContentView.swift */; };
 		2171D1C92B20CB53007D3E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D1C82B20CB53007D3E6E /* Assets.xcassets */; };
 		2171D1CC2B20CB53007D3E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D1CB2B20CB53007D3E6E /* Preview Assets.xcassets */; };
 		2171D1D42B20CFCC007D3E6E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1D32B20CFCC007D3E6E /* HealthKitManager.swift */; };
 		2171D1D62B20DAF4007D3E6E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1D52B20DAF4007D3E6E /* HealthView.swift */; };
+		2171D1DE2B20E989007D3E6E /* StepsCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1DD2B20E989007D3E6E /* StepsCharge.swift */; };
+		2171D1DF2B20EA6A007D3E6E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2171D1D82B20E834007D3E6E /* HealthKit.framework */; };
+		2171D1E02B20EA6A007D3E6E /* HealthKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2171D1D82B20E834007D3E6E /* HealthKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2171D1E12B20EA6A007D3E6E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2171D1E02B20EA6A007D3E6E /* HealthKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2171D1C12B20CB52007D3E6E /* StepCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2171D1C42B20CB52007D3E6E /* StepChargeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepChargeApp.swift; sourceTree = "<group>"; };
-		2171D1C62B20CB52007D3E6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2171D1C82B20CB53007D3E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2171D1CB2B20CB53007D3E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2171D1D22B20CE5C007D3E6E /* StepCharge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepCharge.entitlements; sourceTree = "<group>"; };
 		2171D1D32B20CFCC007D3E6E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		2171D1D52B20DAF4007D3E6E /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		2171D1D82B20E834007D3E6E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2171D1DD2B20E989007D3E6E /* StepsCharge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCharge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2171D1DF2B20EA6A007D3E6E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +58,7 @@
 			children = (
 				2171D1C32B20CB52007D3E6E /* StepCharge */,
 				2171D1C22B20CB52007D3E6E /* Products */,
+				2171D1D72B20E834007D3E6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,10 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				2171D1D22B20CE5C007D3E6E /* StepCharge.entitlements */,
-				2171D1C42B20CB52007D3E6E /* StepChargeApp.swift */,
 				2171D1D32B20CFCC007D3E6E /* HealthKitManager.swift */,
+				2171D1DD2B20E989007D3E6E /* StepsCharge.swift */,
 				2171D1D52B20DAF4007D3E6E /* HealthView.swift */,
-				2171D1C62B20CB52007D3E6E /* ContentView.swift */,
 				2171D1C82B20CB53007D3E6E /* Assets.xcassets */,
 				2171D1CA2B20CB53007D3E6E /* Preview Content */,
 			);
@@ -75,6 +91,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2171D1D72B20E834007D3E6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2171D1D82B20E834007D3E6E /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +109,7 @@
 				2171D1BD2B20CB52007D3E6E /* Sources */,
 				2171D1BE2B20CB52007D3E6E /* Frameworks */,
 				2171D1BF2B20CB52007D3E6E /* Resources */,
+				2171D1E12B20EA6A007D3E6E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,9 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2171D1DE2B20E989007D3E6E /* StepsCharge.swift in Sources */,
 				2171D1D62B20DAF4007D3E6E /* HealthView.swift in Sources */,
-				2171D1C72B20CB52007D3E6E /* ContentView.swift in Sources */,
-				2171D1C52B20CB52007D3E6E /* StepChargeApp.swift in Sources */,
 				2171D1D42B20CFCC007D3E6E /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
