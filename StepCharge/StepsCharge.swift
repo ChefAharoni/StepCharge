@@ -44,6 +44,9 @@ struct StepsCharge: App {
                     .tag(3)
             
             }
+            .onAppear {
+                healthKitManager.queryMonthlyStepCount()  // Fetch monthly steps when the TabView appears
+            }
         }
     }
 }
