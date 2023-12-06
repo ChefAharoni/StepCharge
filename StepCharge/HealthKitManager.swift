@@ -21,6 +21,7 @@ class HealthKitManager: ObservableObject { // Class Declaration: Defines HealthK
     }
 
     func requestAuthorization() {
+        // Request Authorization: This method requests the user's permission to read their step count data. It first ensures that the step count type (HKObjectType.quantityType(forIdentifier: .stepCount)) is valid. The requestAuthorization method of HKHealthStore is then called, specifying that we want to read step count data. If authorization is successful, queryStepCount is called. Error handling for failure of authorization should be done in the else block.
         guard let stepCountType = HKObjectType.quantityType(forIdentifier: .stepCount) else {
             return // This should never fail
         }
@@ -35,6 +36,7 @@ class HealthKitManager: ObservableObject { // Class Declaration: Defines HealthK
     }
 
     func queryStepCount() {
+       // Query Step Count: The implementation of this method would involve creating a query to retrieve step count data from HealthKit and then updating the steps property with the result.
         guard let stepCountType = HKObjectType.quantityType(forIdentifier: .stepCount) else {
             return // This should never fail
         }

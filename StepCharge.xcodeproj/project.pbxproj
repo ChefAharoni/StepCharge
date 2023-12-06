@@ -13,22 +13,7 @@
 		2171D1D62B20DAF4007D3E6E /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1D52B20DAF4007D3E6E /* HealthView.swift */; };
 		2171D1DE2B20E989007D3E6E /* StepsCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1DD2B20E989007D3E6E /* StepsCharge.swift */; };
 		2171D1DF2B20EA6A007D3E6E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2171D1D82B20E834007D3E6E /* HealthKit.framework */; };
-		2171D1E02B20EA6A007D3E6E /* HealthKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2171D1D82B20E834007D3E6E /* HealthKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2171D1E12B20EA6A007D3E6E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2171D1E02B20EA6A007D3E6E /* HealthKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2171D1C12B20CB52007D3E6E /* StepCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +94,6 @@
 				2171D1BD2B20CB52007D3E6E /* Sources */,
 				2171D1BE2B20CB52007D3E6E /* Frameworks */,
 				2171D1BF2B20CB52007D3E6E /* Resources */,
-				2171D1E12B20EA6A007D3E6E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +294,9 @@
 				DEVELOPMENT_TEAM = FY6ZSJ3L3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We use the steps data from your health app to evaulate the awarded electricity credits.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We use the steps data from your health app to evaulate the awarded electricity credits.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +327,9 @@
 				DEVELOPMENT_TEAM = FY6ZSJ3L3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We use the steps data from your health app to evaulate the awarded electricity credits.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We use the steps data from your health app to evaulate the awarded electricity credits.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
