@@ -18,7 +18,7 @@ struct StepsCharge: App {
 
     var body: some Scene {
         WindowGroup {
-            TabView {
+            TabView(selection: $selectedTab) {
                 AccountEntryView(userName: $userName, selectedTab: $selectedTab)
                     .tabItem {
                         Label("Account", systemImage: "person.crop.circle")
@@ -35,30 +35,15 @@ struct StepsCharge: App {
                     .tabItem {
                         Label("Monthly Steps", systemImage: "calendar")
                     }
+                    .tag(2)
 
                 StepRedeemView(healthKitManager: healthKitManager, userName: userName)
                     .tabItem {
                         Label("Redeem", systemImage: "dollarsign.circle")
                     }
+                    .tag(3)
+            
             }
         }
     }
 }
-
-/*
- @StateObject var healthKitManager = HealthKitManager()
- @State private var userName: String = ""
- @State private var selectedTab: Int = 0
- TabView(selection: $selectedTab) {
-     AccountEntryView(userName: $userName, selectedTab: $selectedTab)
-         .tabItem {
-             Label("Account", systemImage: "person.crop.circle")
-         }
-         .tag(0)
-
-     HealthView(healthKitManager: healthKitManager, displayMode: .daily)
-         .tabItem {
-             Label("Daily Steps", systemImage: "sun.max")
-         }
-         .tag(1)
- */
