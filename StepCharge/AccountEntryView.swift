@@ -28,11 +28,11 @@ import SwiftUI
                          }
                      }
              }
-
              Button("Submit") {
                  userName = mapAccountToName(accountNumber)
-                 isAccountEntered = true // Update the state to show welcome message
-//                 selectedTab = 1 // Change to the Daily Steps tab
+                 // Initialize the account balance for the user if needed
+                 AccountManager.shared.initializeBalance(forUser: userName)
+                 isAccountEntered = true
              }
              .disabled(accountNumber.count != 12)
          }

@@ -14,6 +14,10 @@ struct StepRedeemView: View {
     @State private var showingRedemptionAlert = false
     @State private var credits = 0.0
 //    @AppStorage("lastRedemptionDateString") private var lastRedemptionDateString: String?
+    
+    private var accountBalance: Double {
+        AccountManager.shared.getBalance(forUser: userName)
+    }
 
     var body: some View {
         VStack {
@@ -34,14 +38,16 @@ struct StepRedeemView: View {
 
             Button("Redeem Credits") {
                 let stepsCredits = calculateCredits(steps: steps)
-                redeemCredits(creditsToAdd: stepsCredits)
-                showingRedemptionAlert = true
-//                lastRedemptionDateString = ISO8601DateFormatter().string(from: Date()) // Store the date as a string
+                if accountBalance >= stepsCredits {
+                    redeemCredits(creditsToAdd: stepsCredits)
+                    AccountManager.shared.updateBalance(forUser: userName, amount: stepsCredits)
+                    showingRedemptionAlert = true
+                } else {
+                    // Handle case where there isn't enough balance
+                }
             }
-//            .disabled(!canRedeemCredits(steps: steps))
-//            .disabled(showingMonthlySteps ? steps < 50000 : steps < 10000)
             .alert(isPresented: $showingRedemptionAlert) {
-                Alert(title: Text("Credits Redeemed"), message: Text("You have redeemed $\(calculateCredits(steps: steps), specifier: "%.2f") credits."), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Credits Redeemed"), message: Text("You have redeemed $\(calculateCredits(steps: steps), specifier: "%.2f") credits. Remaining balance: $\(accountBalance, specifier: "%.2f")"), dismissButton: .default(Text("OK")))
             }
         }
         .padding()
