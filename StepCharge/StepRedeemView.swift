@@ -51,11 +51,11 @@ struct StepRedeemView: View {
     }
 
     func calculateCredits(steps: Int) -> Double {
-        return Double(steps) * 0.0001
+        return Double(steps) * 0.0001 // 1 credit for every 10,000 steps
     }
 
     func redeemCredits(creditsToAdd: Double) {
-        credits += creditsToAdd
+        credits += creditsToAdd // Add Credits to the existing credits
     }
     
 //    func canRedeemCredits(steps: Int) -> Bool {
