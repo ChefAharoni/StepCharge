@@ -10,6 +10,7 @@
 		2150753F2B20F7D300405A4F /* AccountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2150753E2B20F7D300405A4F /* AccountEntryView.swift */; };
 		215075412B20F83400405A4F /* StepRedeemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215075402B20F83400405A4F /* StepRedeemView.swift */; };
 		215075432B2214E400405A4F /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215075422B2214E400405A4F /* AccountManager.swift */; };
+		215075452B222FB500405A4F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215075442B222FB500405A4F /* Config.swift */; };
 		2171D1C92B20CB53007D3E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D1C82B20CB53007D3E6E /* Assets.xcassets */; };
 		2171D1CC2B20CB53007D3E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D1CB2B20CB53007D3E6E /* Preview Assets.xcassets */; };
 		2171D1D42B20CFCC007D3E6E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D1D32B20CFCC007D3E6E /* HealthKitManager.swift */; };
@@ -22,6 +23,8 @@
 		2150753E2B20F7D300405A4F /* AccountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEntryView.swift; sourceTree = "<group>"; };
 		215075402B20F83400405A4F /* StepRedeemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepRedeemView.swift; sourceTree = "<group>"; };
 		215075422B2214E400405A4F /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		215075442B222FB500405A4F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		215075462B22300800405A4F /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		2171D1C12B20CB52007D3E6E /* StepCharge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCharge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D1C82B20CB53007D3E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2171D1CB2B20CB53007D3E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				215075422B2214E400405A4F /* AccountManager.swift */,
 				2171D1DD2B20E989007D3E6E /* StepsCharge.swift */,
 				2171D1D52B20DAF4007D3E6E /* HealthView.swift */,
+				215075442B222FB500405A4F /* Config.swift */,
+				215075462B22300800405A4F /* .gitignore.md */,
 				2171D1C82B20CB53007D3E6E /* Assets.xcassets */,
 				2171D1CA2B20CB53007D3E6E /* Preview Content */,
 			);
@@ -166,6 +171,7 @@
 				2171D1DE2B20E989007D3E6E /* StepsCharge.swift in Sources */,
 				2171D1D62B20DAF4007D3E6E /* HealthView.swift in Sources */,
 				215075412B20F83400405A4F /* StepRedeemView.swift in Sources */,
+				215075452B222FB500405A4F /* Config.swift in Sources */,
 				2171D1D42B20CFCC007D3E6E /* HealthKitManager.swift in Sources */,
 				2150753F2B20F7D300405A4F /* AccountEntryView.swift in Sources */,
 				215075432B2214E400405A4F /* AccountManager.swift in Sources */,
