@@ -9,14 +9,17 @@ import SwiftUI
 
  struct AccountEntryView: View {
      @State private var accountNumber: String = ""
-     @Binding var userName: String
-     @Binding var selectedTab: Int
-     @State private var isAccountEntered = false // State to track if account is entered
+        @Binding var userName: String
+        @Binding var selectedTab: Int
+        @State private var isAccountEntered = false
+        @State private var currentAccountBalance: Double = 0.0 // Use this sing
+
 
      var body: some View {
          VStack {
              if isAccountEntered {
                  Text("Welcome, \(userName)")
+                 Text("Account Balance: $\(currentAccountBalance, specifier: "%.2f")") // Display updated account balance
              } else {
                  Text("Enter your Account Number:")
                  TextField("#####-#####-#", text: $accountNumber)
@@ -30,17 +33,23 @@ import SwiftUI
              }
              Button("Submit") {
                  userName = mapAccountToName(accountNumber)
-                 // Initialize the account balance for the user if needed
                  AccountManager.shared.initializeBalance(forUser: userName)
+                 currentAccountBalance = AccountManager.shared.getBalance(forUser: userName) // Fetch and update balance
                  isAccountEntered = true
              }
              .disabled(accountNumber.count != 12)
          }
          .padding()
+         .onAppear {
+             // Fetch and update the balance when the view appears
+             if isAccountEntered {
+                 currentAccountBalance = AccountManager.shared.getBalance(forUser: userName)
+             }
+         }
      }
 
      func mapAccountToName(_ account: String) -> String {
-         let accountsDict = ["12345-12345-1": "Alice", "23456-23456-2": "Bob", "34567-34567-3": "Charlie", "123451234512": "Amit Aharoni"]
+         let accountsDict = ["12345-12345-1": "Alice", "23456-23456-2": "Bob", "34567-34567-3": "Charlie", "123451234512": "Amit Aharoni", "543215432154": "Peter Saulitis"]
          return accountsDict[account] ?? "Unknown User"
      }
  }
@@ -63,4 +72,3 @@ import SwiftUI
          return result
      }
  }
-
